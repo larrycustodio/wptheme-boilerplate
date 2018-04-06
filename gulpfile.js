@@ -1,6 +1,5 @@
 const dotenv = require('dotenv').config();
 const gulp = require('gulp');
-const {phpMinify} = require('@cedx/gulp-php-minify');
 const sass = require('gulp-sass');
 const cleanCSS = require('gulp-clean-css');
 const plumber = require('gulp-plumber');
@@ -10,20 +9,6 @@ const uglify = require('gulp-uglify');
 const sourcemaps = require('gulp-sourcemaps');
 const babel = require('gulp-babel');
 const browserSync = require('browser-sync').create();
-
-
-gulp.task('minify:php', () => gulp.src('path/to/lib/**/*.php', {read: false})
-  .pipe(phpMinify())
-  .pipe(gulp.dest('path/to/out'))
-);
-
-
-
-gulp.task('build-php', () =>
-    gulp.src('src/php/**/*.php', {read: false})
-        .pipe(phpMinify())
-        .pipe(gulp.dest('./'))
-);
 
 gulp.task('build-sass', () =>
     gulp.src('src/scss/main.scss')
@@ -49,9 +34,9 @@ gulp.task('build-js', () =>
         .pipe(plumber())
         .pipe(sourcemaps.init('./'))
         .pipe(babel())
-        .pipe(concat())
-        .pipe(rename('app.min.js'))
+        .pipe(concat('all.js'))
         .pipe(uglify())
+        .pipe(rename('app.min.js'))
         .pipe(sourcemaps.write('./'))
         .pipe(plumber.stop())
         .pipe(gulp.dest('./'))
