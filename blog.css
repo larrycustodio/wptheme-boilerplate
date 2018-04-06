@@ -56,10 +56,20 @@ h6, .h6 {
 }
 
 /* Active state gets a caret at the bottom */
-.blog-nav .active {
+.blog-nav li {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  font-weight: 500;	
+}
+.blog-nav li a {
   color: #fff;
 }
-.blog-nav .active:after {
+
+.blog-nav>.current_page_item {
+  color: #fff;
+}
+.blog-nav>.current_page_item:after {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -131,7 +141,6 @@ h6, .h6 {
   text-align: center;
   border-radius: 30px;
 }
-
 
 /*
  * Blog posts
