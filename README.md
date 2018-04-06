@@ -1,5 +1,6 @@
-# Bootstrap Blog
+# Bootstrap 3 Blog Theme 
 
-Build on the official Bootstrap blog starter template to learn WordPress.
+Building upon official Bootstrap blog starter template to learn WordPress.
 
-### [View the tutorial!](https://www.taniarascia.com/developing-a-wordpress-theme-from-scratch/)
+## Resources
+[Developing A WP Theme from Scratch](https://www.taniarascia.com/developing-a-wordpress-theme-from-scratch/)
