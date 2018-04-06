@@ -24,4 +24,4 @@
         </ol>
     </div>
 </div>
-/.blog-sidebar
+<!-- /.blog-sidebar -->

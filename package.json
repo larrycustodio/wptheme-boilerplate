@@ -1,0 +1,36 @@
+{
+  "name": "bootstrap-wptheme",
+  "version": "1.0.0",
+  "description": "Building upon official Bootstrap blog starter template to learn WordPress.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "dev": "gulp watch",
+    "build": "gulp",
+    "type": "git",
+    "url": "git+https://github.com/larrycustodio/wptheme-boilerplate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/larrycustodio/wptheme-boilerplate/issues"
+  },
+  "homepage": "https://github.com/larrycustodio/wptheme-boilerplate#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "browser-sync": "^2.23.6",
+    "dotenv": "^5.0.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-clean-css": "^3.9.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-plumber": "^1.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0"
+  }
+}
