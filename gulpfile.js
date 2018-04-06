@@ -1,5 +1,6 @@
 const dotenv = require('dotenv').config();
 const gulp = require('gulp');
+const {phpMinify} = require('@cedx/gulp-php-minify');
 const sass = require('gulp-sass');
 const cleanCSS = require('gulp-clean-css');
 const plumber = require('gulp-plumber');
@@ -10,11 +11,19 @@ const sourcemaps = require('gulp-sourcemaps');
 const babel = require('gulp-babel');
 const browserSync = require('browser-sync').create();
 
-// gulp.task('build-html', () =>
-//     // gulp.src('src/*.html')
-//     //     .pipe(htmlmin({ collapseWhitespace: true }))
-//     //     .pipe(gulp.dest('dist'))
-// );
+
+gulp.task('minify:php', () => gulp.src('path/to/lib/**/*.php', {read: false})
+  .pipe(phpMinify())
+  .pipe(gulp.dest('path/to/out'))
+);
+
+
+
+gulp.task('build-php', () =>
+    gulp.src('src/php/**/*.php', {read: false})
+        .pipe(phpMinify())
+        .pipe(gulp.dest('./'))
+);
 
 gulp.task('build-sass', () =>
     gulp.src('src/scss/main.scss')

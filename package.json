@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/larrycustodio/wptheme-boilerplate#readme",
   "devDependencies": {
+    "@cedx/gulp-php-minify": "^7.1.1",
     "babel-core": "^6.26.0",
     "browser-sync": "^2.23.6",
     "dotenv": "^5.0.1",
